@@ -2,9 +2,11 @@ package com.example.Cricket_Team.Service;
 
 import com.example.Cricket_Team.Repositry.PlayerRepo;
 import com.example.Cricket_Team.model.Player;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class PlayerServices implements PlayerRepo {
     @Override
     public ArrayList<Player> getPlayers() {
