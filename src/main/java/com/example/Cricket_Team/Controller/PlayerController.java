@@ -23,4 +23,21 @@ public class PlayerController {
     public Player getPlayerById(@PathVariable int playerId){
         return playerServices.getPlayerById(playerId);
     }
+
+    @PutMapping("/player")
+    public  Player addPlayer(@RequestBody Player player){
+        return playerServices.addPlayer(player);
+    }
+
+    @PostMapping("/player/{playerId}")
+    public Player updatePlayer(@PathVariable int playerId,@RequestBody Player player){
+        return playerServices.updatePlayer(playerId,player);
+    }
+
+    @DeleteMapping("player/{playerId}")
+    public ArrayList<Player> deletePlayer(int playerId){
+        return playerServices.deletePlayer(playerId);
+    }
+
+
 }
